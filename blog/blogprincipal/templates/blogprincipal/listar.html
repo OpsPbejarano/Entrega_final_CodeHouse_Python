@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar blog</title>
+</head>
+<body>
+    <ul>
+        {% for blog in object_list %}
+            <li>
+                <p> Nombre: {{ blog.titulo }}</p>
+                <p> Descripcion: {{ blog.descripcion }}</p>
+                <p> Autor: {{ blog.autor }}</p>
+                <p> Creacion: {{ blog.fecha_creacion }}</p>
+                <a href="{% url 'detalle' blog.id %}">ver</a>
+            </li>
+        {% endfor %}        
+    </ul>
+    <a href="{% url 'home' %}">home</a>
+</body>
+</html>
