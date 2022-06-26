@@ -28,7 +28,7 @@ class UserModificar(LoginRequiredMixin, UpdateView):
 
 class AvatarCrear(LoginRequiredMixin,CreateView):
     model = Avatar
-    success_url = reverse_lazy('entrar')
+    success_url = reverse_lazy('home')
     template_name = "users/cargar_avatar.html"
     fields = ["blog", "image"]    
 
