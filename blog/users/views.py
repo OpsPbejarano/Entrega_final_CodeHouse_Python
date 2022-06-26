@@ -5,7 +5,6 @@ from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 from users.forms import UsuarioForm
 from users.models import Avatar
-# Create your views here.
 
 
 class SingUpUser(CreateView):
