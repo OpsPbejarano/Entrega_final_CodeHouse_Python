@@ -17,6 +17,7 @@
   </ul>
 
   <img height="128" src="{{ user.avatar_set.first.image.url }}"></img>
+  <p></p>
   <a href="{% url 'home' %}">volver</a>
   <a href="{% url 'editar' user.id %}">editar</a>
   <a href="{% url 'cargar_avatar' user.id %}">Cargar/editar avatar</a>
